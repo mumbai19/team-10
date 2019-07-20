@@ -1,6 +1,9 @@
 from django.db import models
 import random
 import os
+import pyimgur
+import requests
+import json
 
 PRODUCT_CATEGORY_CHOICES=(
 ('Bags','Bags'),
@@ -19,6 +22,7 @@ def get_filename_ext(filepath):
     return name,ext
 
 def upload_image_path(instance, filename):
+<<<<<<< HEAD
     new_filename = random.randint(1000,9999)
     name, ext = get_filename_ext(filename)
     final_filename = '{new_filename}{ext}'.format(new_filename = new_filename , ext = ext)
@@ -54,6 +58,15 @@ class ProductManager(models.Manager):
     def jewellery(self):
         return self.filter(category='Jewellery')
         
+=======
+    URL = "https://api.imgur.com/3/upload"
+    headers = {'Content-Type':  'application/json',
+      'Authorization': 'Client-ID 3f40f86eef92465'}
+    with open(filename, 'rb') as f:
+        payload = {'data':f}
+        r = requests.post(URL,data=json.dumps(payload),headers=headers)
+    print("data is ",r.json())
+>>>>>>> f7418790d69847895a22b162e0496b7391061c6a
 
 class Product(models.Model):
     title             = models.CharField(max_length = 120)
