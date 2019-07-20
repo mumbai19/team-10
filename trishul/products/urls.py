@@ -6,7 +6,7 @@ from products.views import (ProductListView, ProductBagsListView, ProductBookmar
 app_name='products'
 
 urlpatterns=[
-#<<<<<<< HEAD
+
     url(r'^$', ProductListView.as_view(), name='list'),
     url(r'^bags/', ProductBagsListView.as_view(), name='bags'),
     url(r'^bookmarks/', ProductBookmarksListView.as_view(), name='bookmarks'),
@@ -18,7 +18,3 @@ urlpatterns=[
     url(r'', ProductListView.as_view(), name='list'),
 
 
-#=======
-#    url(r'', ProductListView.as_view(), name='list'),
-#>>>>>>> f7418790d69847895a22b162e0496b7391061c6a
-]
