@@ -21,10 +21,10 @@ from accounts.views import register, user_login, user_logout
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home_page, name='home'),
-    url(r'^donate', donate, name='donate'),
-    url(r'^register', register, name='register'),
-    url(r'^login', user_login, name='login'),
-    url(r'^logout', user_logout, name='logout'),
+    url(r'^donate/', donate, name='donate'),
+    #url(r'^register', register, name='register'),
+    #url(r'^login', user_login, name='login'),
+    url(r'^logout/', user_logout, name='logout'),
     url(r'^products/', include('products.urls')),
     url(r'^accounts/', include('accounts.urls')),
 ]
