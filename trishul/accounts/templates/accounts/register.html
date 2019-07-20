@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+	<div class='row justify-content-md-center'>
+		<div class='col-lg-5 col-md-6 col-sm-12'>
+		    <div class="card">
+		      	<div class="card-body">
+		      	    <h3 style="text-align:center;">Create Account</h3>
+		      	        <form action="{% url 'register' %}" method="post" class="register-form">
+		      	        	{% csrf_token %}
+		      	        	<div class="row mt-3">
+				              <div class="col">
+				                {{ form.first_name }}
+				              </div>
+				              <div class="col">
+				                {{ form.last_name }}
+				              </div>
+				          </div>
+				         </form>
+				        </div>
+        			</div>
+		      	
+			</div>
+		
+	</div>
+</body>
