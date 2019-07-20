@@ -1,3 +1,5 @@
+
+  
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.shortcuts import render, redirect
@@ -47,8 +49,3 @@ def guest_register_view(request):
         else:
             return redirect('/register/')
     return redirect('/register/')
-
-
-
-
-
