@@ -1,5 +1,6 @@
 package com.example.android.fundraiser;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,6 +31,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public  void onClick(View view) {
                 Toast.makeText(view.getContext(),"YO",Toast.LENGTH_LONG).show();
+//                setContentView(R.layout.main);
+                Intent chart=new Intent(LoginActivity.this,MainActivity.class);
+                LoginActivity.this.startActivity(chart);
             }
         });
     }
