@@ -16,5 +16,5 @@ urlpatterns=[
     url(r'^paperweights/', ProductPaperweightsListView.as_view(), name='paperweights'),
     url(r'^candles/', ProductCandlesListView.as_view(), name='candles'),
     url(r'', ProductListView.as_view(), name='list'),
-
+]
 
