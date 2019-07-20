@@ -16,14 +16,15 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from .views import home_page, donate
-from accounts.views import register, login
+from accounts.views import register, user_login, user_logout
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home_page, name='home'),
     url(r'^donate', donate, name='donate'),
     url(r'^register', register, name='register'),
-    url(r'^login', login, name='login'),
+    url(r'^login', user_login, name='login'),
+    url(r'^logout', user_logout, name='logout'),
     url(r'^products/', include('products.urls')),
     url(r'^accounts/', include('accounts.urls')),
 ]
