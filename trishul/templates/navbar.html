@@ -9,26 +9,43 @@
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Products
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+      <li class="nav-item dropdown {% if request.path == products_bags_url %}active{% endif %}">
+           <a class="nav-link dropdown-toggle dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+             <i class="fas fa-book"></i> Products
+           </a>
+           <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item" href="{{ products_cfa_url }}">CFA</a>
+             <a class="dropdown-item" href="{{ products_frm_url }}">FRM</a>
+             <a class="dropdown-item" href="{{ products_erp_url }}">ERP</a>
+             <a class="dropdown-item" href="{{ products_caia_url }}">CAIA</a>
+             <a class="dropdown-item" href="{{ products_others_url }}">Others</a>
+           </div>
+        </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'donate' %}">Donate !</a>
+        <a class="nav-link" href="{% url 'donate' %}">Donate</a>
       </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      {% if request.user.is_authenticated %}
+      <li class="nav-item dropdown">
+           <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ request.user.username }}
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+      {% else %}
       <li class="nav-item">
         <a class="nav-link" href="{% url 'login' %}">Login</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'register' %}">Register</a>
       </li>
+      {% endif %}
     </ul>
   </div>
 </nav>
