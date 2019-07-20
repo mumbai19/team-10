@@ -1,17 +1,25 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-
 {% block content %}
+
 <div class="jumbotron">
-    <h1>Please Login here</h1>
+	<div class="container" style="text-align:center;">
+
+    <h1 class="divide">Please Login here</h1>
     <form action="{% url 'accounts:login' %}" method="POST">
       {% csrf_token %}
       <label for="username">Username: </label>
-      <input type="text" name="username">
+
+     <input type="text" name="username">
+     <br><br>
       <label for="passsword">Password:</label>
       <input type="password" name="password">
-      <input type="submit" value="Login">
+      <br><br>
+      <input type="submit" class="btn btn-primary" value="Login"> 
+      
     </form>
+    </div>
 </div>
+
 
 {% endblock %}
