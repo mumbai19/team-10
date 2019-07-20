@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private final static int REQUEST_CODE_1 = 1;
+//    private final static int   = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Click", Toast.LENGTH_LONG).show();
                 String msg = "This message comes from PassingDataSourceActivity's first button";
-                OpenGateway(msg);
+                Intent intent =new Intent(MainActivity.this,Payment.class);
+                MainActivity.this.startActivity(intent);
+//                OpenGateway(msg);
             }
         });
     }
