@@ -28,14 +28,27 @@ class LoginView(NextUrlMixin, RequestFormAttachMixin, FormView):
         return redirect(next_path)
 
 
-class LoginView(NextUrlMixin, RequestFormAttachMixin, FormView):
-    form_class = LoginForm
-    template_name = 'accounts/login.html'
-    sucess_url = '/'
-    default_next = '/'
+def guest_register_view(request):
+    form = GuestForm(request.POST or None)
+    context = {'form':form,}
+    next_ = request.GET.get('next')
+    next_post = request.POST.get('next')
+    redirect_path = next_ or next_post or None
+    if form.is_valid():
+        print(form.cleaned_data)
+        email = form.cleaned_data.get('email')
+        first_name = form.cleaned_data.get('first_name')
+        last_name = form.cleaned_data.get('last_name')
+        mobile_number = form.cleaned_data.get('mobile_number')
+        new_guest_email = GuestDetails.objects.create(email= email,first_name=first_name, last_name=last_name, mobile_number=mobile_number)
+        request.session['guest_email_id'] = new_guest_email.id
+        if is_safe_url(redirect_path, request.get_host()):
+            return redirect(redirect_path)
+        else:
+            return redirect('/register/')
+    return redirect('/register/')
 
-    def form_valid(self, form):
-        next_path = self.get_next_url()
-        return redirect(next_path)
+
+
 
 

@@ -4,6 +4,16 @@ from django.db import models
 from django.template.loader import get_template
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
+class GuestDetails(models.Model):
+    email =models.EmailField()
+    mobile_number  = PhoneNumberField(default='9999999999')
+    first_name     = models.CharField(max_length=255, default='John')
+    last_name      = models.CharField(max_length=255, default='Miller')
+    
+
+    def __str__(self):
+        return self.email
+
 class User(AbstractBaseUser):
 	email          = models.EmailField(max_length=255, unique=True, default='abc123@gmail.com')
 
@@ -21,6 +31,7 @@ class User(AbstractBaseUser):
 
     def has_module_perms(self, app_label):
         return True
+
 
 
 
