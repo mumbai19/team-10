@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.template.loader import get_template
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
-from django.phonenumber_field.modelfields import PhoneNumberField
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class UserProfile(models.Model):
@@ -14,7 +14,7 @@ class UserProfile(models.Model):
     
 
     def __str__(self):
-        return self.email
+    	return self.email
 
 class User(AbstractBaseUser):
 	email          = models.EmailField(max_length=255, unique=True, default='abc123@gmail.com')
@@ -23,7 +23,7 @@ class User(AbstractBaseUser):
 
 	REQUIRED_FIELD = ['email']
 
-	objects = UserManager()
+	
 
 	def __str__(self):
 		return self.email
