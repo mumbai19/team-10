@@ -5,13 +5,26 @@
     {% if registered %}
       <h1>Thank You for Registering</h1>
     {% else %}
-      <h1>Register Here</h1>
-      <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ user_form.as_p }}
-        {{ profile_form.as_p }}
-        <input type="submit" value="Register">
-      </form>
+      <div class="container" style="text-align:center;">
+
+    <h1>Please Register</h1><br>
+    <form action="{% url 'accounts:login' %}" method="POST">
+      {% csrf_token %}
+      <label for="Email">Email: </label>
+
+     <input type="text" name="Email">
+     <br><br>
+      <label for="username">Username: </label>
+
+     <input type="text" name="username">
+     <br><br>
+      <label for="passsword">Password:</label>
+      <input type="password" name="password">
+      <br><br>
+      <input type="submit" class="btn btn-primary" value="Login"> 
+      
+    </form>
+    </div>
     {% endif %}
 </div>
 {% endblock %}

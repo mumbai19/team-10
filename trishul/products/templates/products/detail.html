@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="container" >
+    {% if object.image %}
+    
+      <img class="card-img-top" src="{{ object.image }}" alt="Card image cap" >
+    {% endif %}
+    <div class="body">
+      <div class="row">
+          <p class="title">{{ object.title }}</p>
+      </div>
+      <div class="row">
+          <p class="sell-price"><i class="fas fa-rupee-sign"></i> <big>{{ object.price }}</big></p>
+      </div>
+      {% if object.in_stock %}
+        <div class="add-to-cart justify-content-md-center">
+          <button type="button" class="btn btn-success btn-block mb-2">Buy Now</button>
+        </div>
+      {% else %}
+        <button type="button" class="btn btn-warning btn-block mb-2 out-of-stock" disabled>Out Of Stock</button>
+      {% endif %}
+    </div>
+  </div>
+  {% endblock %}
+  

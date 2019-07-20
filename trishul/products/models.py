@@ -1,7 +1,7 @@
 from django.db import models
 import random
 import os
-import pyimgur
+
 import requests
 import json
 
@@ -38,7 +38,7 @@ class Product(models.Model):
     in_stock          = models.BooleanField(default=True)
     image             = models.ImageField(upload_to = upload_image_path,null =True, blank = True)
 
-    objects = ProductManager()
+  # objects = ProductManager()
 
     def __str__(self):
         return str(self.title)
