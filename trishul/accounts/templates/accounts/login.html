@@ -1,7 +1,8 @@
+  
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-	 {% if messages %}
+     {% if messages %}
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
         {% for message in messages %}
         <span{% if message.tags %} class="{{ message.tags }}"{% endif %}>
@@ -14,7 +15,7 @@
         {% endfor %}
       </div>
       {% endif %}
-	 <div class="row justify-content-md-center">
+     <div class="row justify-content-md-center">
       <div class="col-lg-4 col-sm-10 col-md-6">
         <div class="card">
           <div class="card-body">
@@ -43,9 +44,7 @@
                   </div>
                 </form>
           </div>
-	</div>
-	<div class="card-footer text-muted" style="text-align:center;">
+    </div>
+    <div class="card-footer text-muted" style="text-align:center;">
             New to Trishul? <a href="/register/">Signup</a>
           </div>
-</div>
-

@@ -6,7 +6,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from phonenumber_field.modelfields import PhoneNumberField
 
 
-class UserProfile(models.Model):
+class Profile(models.Model):
     email =models.EmailField()
     mobile_number  = PhoneNumberField(default='9999999999')
     first_name     = models.CharField(max_length=255, default='John')
