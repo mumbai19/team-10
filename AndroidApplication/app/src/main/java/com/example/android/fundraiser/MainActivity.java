@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Click", Toast.LENGTH_LONG).show();
 //                String msg = "This message comes from PassingDataSourceActivity's first button";
-                Intent intent =new Intent(MainActivity.this,Payment.class);
+                Intent intent =new Intent(MainActivity.this,Payments.class);
                 MainActivity.this.startActivity(intent);
 //                OpenGateway(msg);
             }
