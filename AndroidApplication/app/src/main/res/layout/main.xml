@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background_01"
+    android:padding="16dp">
 
 
     <ScrollView
@@ -20,14 +22,15 @@
                     android:id="@+id/WomenEmpowermentImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
+                    android:padding="4dp"
                     android:src="@drawable/ic_launcher_background"/>
                 <TextView
                     android:id="@+id/WomenEmpowermentDesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
+                    android:layout_margin="16dp"
                     android:padding="4dp"
+                    android:textColor="#ffffff"
                     android:text="Women Empowerment"/>
             </LinearLayout>
             <LinearLayout
@@ -38,14 +41,15 @@
                     android:id="@+id/ChildrenEducationImg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
+                    android:padding="4dp"
                     android:src="@drawable/ic_launcher_background"/>
                 <TextView
                     android:id="@+id/ChildrenEducation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
+                    android:layout_margin="16dp"
                     android:padding="4dp"
+                    android:textColor="#ffffff"
                     android:text="Children Education"/>
             </LinearLayout>
             <LinearLayout
@@ -56,14 +60,15 @@
                     android:id="@+id/NutritionProgramImg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
+                    android:padding="4dp"
                     android:src="@drawable/ic_launcher_background"/>
                 <TextView
                     android:id="@+id/NutritionProgramDesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
+                    android:layout_margin="16dp"
                     android:padding="4dp"
+                    android:textColor="#ffffff"
                     android:text="Nutrition Program"/>
             </LinearLayout>
             <LinearLayout
@@ -74,14 +79,15 @@
                     android:id="@+id/WorkshopsImg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
+                    android:padding="4dp"
                     android:src="@drawable/ic_launcher_background"/>
                 <TextView
                     android:id="@+id/WorkshopsDesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
+                    android:layout_margin="16dp"
                     android:padding="4dp"
+                    android:textColor="#ffffff"
                     android:text="Workshop"/>
             </LinearLayout>
             <LinearLayout
@@ -92,14 +98,15 @@
                     android:id="@+id/GeneralImg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
+                    android:padding="4dp"
                     android:src="@drawable/ic_launcher_background"/>
                 <TextView
                     android:id="@+id/GeneralDesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
+                    android:layout_margin="16dp"
                     android:padding="4dp"
+                    android:textColor="#ffffff"
                     android:text="General"/>
             </LinearLayout>
         </LinearLayout>
