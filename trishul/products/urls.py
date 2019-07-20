@@ -4,5 +4,5 @@ from products.views import ProductListView
 app_name='products'
 
 urlpatterns=[
-    url(r'^$', ProductListView.as_view(), name='list'),
+    url(r'', ProductListView.as_view(), name='list'),
 ]

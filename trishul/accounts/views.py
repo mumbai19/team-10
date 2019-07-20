@@ -29,6 +29,7 @@ def special(request):
     return HttpResponse('You are logged in')
 
 def user_login(request):
+    print('Inuser')
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -36,11 +37,8 @@ def user_login(request):
         user = authenticate(username=username, password=password)
 
         if user:
-            if user.is_active:
-                login(request, user)
-                return HttpResponseRedirect(reverse('index'))
-            else:
-                return HttpResponse('Account Not Active')
+            login(request, user)
+            return HttpResponseRedirect(reverse('index'))
         else:
             print('Login attempt unsuccessful')
             print('{} and {}'.format(username, password))
