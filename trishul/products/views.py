@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import Http404
-from django.views.generic import (ListView, DetailView)
+from django.views.generic import ListView
 from .models import Product
 # Create your views here.
 
@@ -12,10 +12,79 @@ class ProductListView(ListView):
         request = self.request
         return Product.objects.all()
 
-class ProductDetailView(DetailView):
-    
-    template_name = 'products/detail.html'
-    def get_object(self):
-        
-        id_ = self.kwargs.get("id")
-        return get_object_or_404(Products,id=id_)
+class ProductBagsListView(ListView):
+    template_name = 'products/list.html'
+
+    def get_context_data(self,*args,**kwargs):
+        context = super(ProductBagsListView, self).get_context_data(*args,**kwargs)
+        return context
+
+    def get_queryset(self, *args, **kwargs):
+        request = self.request
+        return Product.objects.bags()
+
+class ProductJewelleryListView(ListView):
+    template_name = 'products/list.html'
+
+    def get_context_data(self,*args,**kwargs):
+        context = super(ProductJewelleryListView, self).get_context_data(*args,**kwargs)
+        return context
+
+    def get_queryset(self, *args, **kwargs):
+        request = self.request
+        return Product.objects.jewellery()
+
+class ProductKeychainsListView(ListView):
+    template_name = 'products/list.html'
+
+    def get_context_data(self,*args,**kwargs):
+        context = super(ProductKeychainsListView, self).get_context_data(*args,**kwargs)
+        return context
+
+    def get_queryset(self, *args, **kwargs):
+        request = self.request
+        return Product.objects.keychains()
+
+class ProductBookmarksListView(ListView):
+    template_name = 'products/list.html'
+
+    def get_context_data(self,*args,**kwargs):
+        context = super(ProductBookmarksListView, self).get_context_data(*args,**kwargs)
+        return context
+
+    def get_queryset(self, *args, **kwargs):
+        request = self.request
+        return Product.objects.bookmarks()
+
+class ProductCardsListView(ListView):
+    template_name = 'products/list.html'
+
+    def get_context_data(self,*args,**kwargs):
+        context = super(ProductCardsListView, self).get_context_data(*args,**kwargs)
+        return context
+
+    def get_queryset(self, *args, **kwargs):
+        request = self.request
+        return Product.objects.cards()
+
+class ProductCandlesListView(ListView):
+    template_name = 'products/list.html'
+
+    def get_context_data(self,*args,**kwargs):
+        context = super(ProductCandlesListView, self).get_context_data(*args,**kwargs)
+        return context
+
+    def get_queryset(self, *args, **kwargs):
+        request = self.request
+        return Product.objects.candles()
+
+class ProductPaperweightsListView(ListView):
+    template_name = 'products/list.html'
+
+    def get_context_data(self,*args,**kwargs):
+        context = super(ProductPaperweightsListView, self).get_context_data(*args,**kwargs)
+        return context
+
+    def get_queryset(self, *args, **kwargs):
+        request = self.request
+        return Product.objects.paperweights()
