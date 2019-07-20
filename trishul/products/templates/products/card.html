@@ -1,0 +1,55 @@
+<div class="card" style="width:16rem;">
+  {% if instance.image %}
+  <a href="{{ instance.get_absolute_url }}">
+    <img class="card-img-top" src="{{ instance.image }}" alt="Card image cap" ></a>
+  {% endif %}
+  <div class="body">
+    <div class="row">
+        <p class="title">{{ instance.title }}</p>
+    </div>
+    <div class="row">
+        <p class="sell-price"><i class="fas fa-rupee-sign"></i> <big>{{ instance.price }}</big></p>
+    </div>
+    {% if instance.in_stock %}
+      <div class="add-to-cart justify-content-md-center">
+        <button type="button" class="btn btn-success btn-block mb-2">Buy Now</button>
+      </div>
+    {% else %}
+      <button type="button" class="btn btn-warning btn-block mb-2 out-of-stock" disabled>Out Of Stock</button>
+    {% endif %}
+  </div>
+</div>
+<style media="screen">
+  .body{
+    padding:0;
+  }
+  .row{
+    padding:0;
+    margin:0;
+  }
+  .title{
+    margin-top:0.2rem;
+    margin-bottom: 0.2rem;
+    margin-left:0.2rem;
+  }
+  .sell-price{
+    margin-bottom: 0.2rem;
+    margin-left:0.2rem;
+    padding: 0;
+  }
+  .actual-price{
+    margin-bottom: 0.2rem;
+    margin-left:0.5rem;
+    padding: 0;
+  }
+  .percent{
+    margin-bottom: 0.2rem;
+    margin-left:0.5rem;
+    padding: 0;
+  }
+  .add-to-cart{
+    margin-left:0.2rem;
+    margin-bottom:0.5rem;
+    margin-right:0.2rem;
+  }
+</style>
