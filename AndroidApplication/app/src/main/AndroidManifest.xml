@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity><!-- Razor metadata -->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_FH0n89NV2RLKvr" />
     </application>
 
 </manifest>
