@@ -1,10 +1,9 @@
 from django.conf.urls import url
-from accounts.views import register
+from accounts import views
 
-
-
-app_name='accounts'
+app_name = 'accounts'
 
 urlpatterns=[
-    url(r'login/',register, name='register'),
+    url('^register/', views.register, name='register'),
+    url('^login/', views.user_login, name='login'),
 ]
