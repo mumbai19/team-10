@@ -4,7 +4,9 @@
     <div class="container">
       <div class="row justify-content-around">
         {% for object in object_list %}
-          {{ object.title }}
+        <div class="my-3">
+          {% include 'products/card.html' with instance=object %}
+        </div>
         {% endfor %}
       </div>
     </div>
