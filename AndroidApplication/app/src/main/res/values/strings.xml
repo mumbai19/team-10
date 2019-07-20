@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyNotes</string>
+    <string name="title_activity_category">CategoryActivity</string>
 </resources>
