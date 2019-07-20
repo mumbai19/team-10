@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+{% extends 'base.html' %}
+{% block content %}
     <h1>Products Page</h1>
     <div class="container">
       <div class="row justify-content-around">
@@ -13,5 +8,4 @@
         {% endfor %}
       </div>
     </div>
-  </body>
-</html>
+{% endblock %}

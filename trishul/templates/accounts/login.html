@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block body_block %}
+{% block content %}
 <div class="jumbotron">
     <h1>Please Login here</h1>
     <form action="{% url 'accounts:login' %}" method="POST">

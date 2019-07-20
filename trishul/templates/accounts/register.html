@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
 
-{% block body_block %}
+{% block content %}
 <div class="jumbotron">
     {% if registered %}
       <h1>Thank You for Registering</h1>
@@ -15,5 +14,4 @@
       </form>
     {% endif %}
 </div>
-
 {% endblock %}
