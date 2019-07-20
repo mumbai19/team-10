@@ -6,6 +6,7 @@
 	<div class="container" style="text-align:center;">
 
     <h1 class="divide">Please Login here</h1>
+    <br>
     <form action="{% url 'accounts:login' %}" method="POST">
       {% csrf_token %}
       <label for="username">Username: </label>
