@@ -2,8 +2,10 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http:// schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="com.example.android.fundraiser.LoginActivity">
 
 
     <ImageView
@@ -43,7 +45,7 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/logsbutton"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button_rectangle_pink"
