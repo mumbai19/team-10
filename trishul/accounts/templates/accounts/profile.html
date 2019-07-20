@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method='POST' action='{% if action_url %}{{ action_url }}{% else %}{% url "login" %}{% endif %}'> {% csrf_token %}
+    {% if next_url %}
+    <input type='hidden' name='next' value='{{ next_url }}' />
+    {% endif %}
+
+    <div class="row mb-2">
+      <div class="col">
+        {{ form.first_name }}
+      </div>
+      <div class="col">
+        {{ form.last_name }}
+      </div>
+    </div>
+
+    
+
+    <button type='submit' class='btn btn-primary btn-block'>Continue As Guest <i class="fas fa-angle-double-right inline"></i></button>
+</form>
