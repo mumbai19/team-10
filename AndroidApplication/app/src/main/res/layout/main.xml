@@ -9,11 +9,34 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
             android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/GeneralImg"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="8dp"
+                    android:padding="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo"/>
+                <TextView
+                    android:id="@+id/GeneralDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:padding="4dp"
+                    android:text="@string/general"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -26,6 +49,7 @@
                     android:layout_height="120dp"
                     android:layout_margin="8dp"
                     android:padding="4dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/women" />
                 <TextView
                     android:id="@+id/WomenEmpowermentDesc"
@@ -33,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:padding="4dp"
-                    android:text="Women Empowerment"
+                    android:text="@string/women_empowerment"
                     android:textColor="#ffffff"/>
             </LinearLayout>
             <LinearLayout
@@ -47,14 +71,15 @@
                     android:layout_height="120dp"
                     android:layout_margin="8dp"
                     android:padding="4dp"
-                    android:src="@drawable/learningC"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/learning"/>
                 <TextView
                     android:id="@+id/ChildrenEducation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:padding="4dp"
-                    android:text="Children Education"
+                    android:text="@string/children_education"
                     android:textColor="#ffffff"/>
             </LinearLayout>
             <LinearLayout
@@ -76,7 +101,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:padding="4dp"
-                    android:text="Nutrition Program"
+                    android:scaleType="centerCrop"
+                    android:text="@string/nutrition_program"
                     android:textColor="#ffffff"/>
             </LinearLayout>
             <LinearLayout
@@ -90,6 +116,7 @@
                     android:layout_height="120dp"
                     android:layout_margin="8dp"
                     android:padding="4dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/workshop"/>
                 <TextView
                     android:id="@+id/WorkshopsDesc"
@@ -97,28 +124,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:padding="4dp"
-                    android:text="Workshop"
-                    android:textColor="#ffffff"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:orientation="horizontal">
-                <ImageButton
-                    android:id="@+id/GeneralImg"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:layout_margin="8dp"
-                    android:padding="4dp"
-                    android:src="@drawable/logo"/>
-                <TextView
-                    android:id="@+id/GeneralDesc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:padding="4dp"
-                    android:text="General"
+                    android:text="@string/workshop"
                     android:textColor="#ffffff"/>
             </LinearLayout>
         </LinearLayout>
