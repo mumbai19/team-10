@@ -5,26 +5,23 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto main-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'home' %}">Home</a>
       </li>
-      <li class="nav-item dropdown {% if request.path == products_bags_url %}active{% endif %}">
-           <a class="nav-link dropdown-toggle dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-             <i class="fas fa-book"></i> Products
-           </a>
-           <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
-             <a class="dropdown-item" href="{{ products_cfa_url }}">CFA</a>
-             <a class="dropdown-item" href="{{ products_frm_url }}">FRM</a>
-             <a class="dropdown-item" href="{{ products_erp_url }}">ERP</a>
-             <a class="dropdown-item" href="{{ products_caia_url }}">CAIA</a>
-             <a class="dropdown-item" href="{{ products_others_url }}">Others</a>
-           </div>
-        </li>
+      <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+    </div>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'donate' %}">Donate</a>
       </li>
-      </ul>
+    </ul>
       <ul class="nav navbar-nav navbar-right">
       {% if request.user.is_authenticated %}
       <li class="nav-item dropdown">
