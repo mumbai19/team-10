@@ -46,7 +46,7 @@
                             <td></td>
                             <td></td>
                             <td>Shipping</td>
-                            <td class="text-right">100</td>
+                            <td class="text-right">0</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -54,7 +54,7 @@
                             <td></td>
                             <td></td>
                             <td><strong>Total</strong></td>
-                            <td class="text-right"><strong>2100</strong></td>
+                            <td class="text-right"><strong>2000</strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -63,10 +63,11 @@
         <div class="col mb-2">
             <div class="row">
                 <div class="col-sm-12  col-md-6">
-                    <button class="btn btn-block btn-light"><a href="{% url 'home' %}">Continue Shopping</a></button>
+                    <a href="{% url 'home' %}" class="btn  btn-block btn-primary">Continue Shopping</a>
                 </div>
                 <div class="col-sm-12 col-md-6 text-right">
-                    <button class="btn btn-lg btn-block btn-success text-uppercase"><a href="{% url 'payments' %}">Checkout</a></button>
+                    <a href="{% url 'payments' %}" class="btn  btn-block btn-success">Checkout</a>
+                    
                 </div>
             </div>
         </div>

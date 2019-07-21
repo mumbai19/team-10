@@ -1,17 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
 <meta name="viewport" content="width=device-width">
 <form action="/purchase" method="POST">
 <!-- Note that the amount is in paise = 50 INR -->
 <script
     src="https://checkout.razorpay.com/v1/checkout.js"
-    data-key=""
-    data-amount="50000"
+    data-key="rzp_test_FH0n89NV2RLKvr"
+    data-amount="200000"
     data-buttontext="Pay with Razorpay"
     data-name="Trishul"
     data-description="Purchase Description"
     data-image="https://your-awesome-site.com/your_logo.jpg"
     data-prefill.name="Trishul"
     data-prefill.email="contact@trishul.com"
-    data-theme.color="#F37254"
+    data-theme.color="#F36789"
 ></script>
 <input type="hidden" style = "background-color: blue" value="Hidden Element" name="hidden">
 </form>
+{% endblock %}
