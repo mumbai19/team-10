@@ -94,11 +94,11 @@
                 {{ object.category }}
               </div>
               <div class="row description">
-                <div class="col-lg-2 col-sm-4 text-muted">
-                  Description
+                <div class="col-lg-2 col-sm-4 text-muted padding-left">
+                      Description
                 </div>
-                <div class="col-lg-8 col-sm-8">
-                  {{ object.description|linebreaks }}
+                <div class="col-lg-11 padding-left">
+                  {{ object.description}}
                 </div>
               </div>
             </div>
@@ -131,6 +131,7 @@
 }
 .description{
   margin-top:2rem;
+  padding-left: 1rem;
 }
 .category{
   margin-top:2rem;
