@@ -67,7 +67,7 @@ class Product(models.Model):
     image             = models.ImageField(upload_to = upload_image_path,null =True, blank = True)
     slug              = models.SlugField(blank=True, unique=True)
 
-  # objects = ProductManager()
+    objects = ProductManager()
 
     def get_absolute_url(self):
         return reverse('product:detail', kwargs={'slug':self.slug})
