@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="jumbotron">
     <h1>Products Page</h1>
-    <div class="container">
+    
       <div class="row justify-content-around">
         {% for object in object_list %}
-        <div class="my-3">
+        <div class="col-3">
           {% include 'products/card.html' with instance=object %}
         </div>
         {% endfor %}
