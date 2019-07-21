@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View view) {
-                Toast.makeText(view.getContext(),"YO",Toast.LENGTH_LONG).show();
+//                Toast.makeText(view.getContext(),"YO",Toast.LENGTH_LONG).show();
 //                setContentView(R.layout.main);
                 Intent chart=new Intent(LoginActivity.this,MainActivity.class);
                 LoginActivity.this.startActivity(chart);

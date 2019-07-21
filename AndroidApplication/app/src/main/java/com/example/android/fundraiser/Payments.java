@@ -80,7 +80,7 @@ public class Payments extends AppCompatActivity implements PaymentResultListener
 
     @Override
     public void onPaymentError(int code, String response) {
-        Toast.makeText(this, "Payment Error", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "Payment Error", Toast.LENGTH_SHORT).show();
     }
 
 }

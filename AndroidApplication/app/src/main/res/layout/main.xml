@@ -15,11 +15,36 @@
             android:layout_height="match_parent"
             android:layout_margin="8dp"
             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:textSize="32dp"
+                android:text="Donation Categories."/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:text="Click the category image to make a donation.."/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textAlignment="center"
+                    android:textSize="24dp"
+                    android:text="General."/>
+
                 <ImageButton
                     android:id="@+id/GeneralImg"
                     android:layout_width="match_parent"
@@ -42,6 +67,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textAlignment="center"
+                    android:textSize="24dp"
+                    android:text="Women Empowerment."/>
 
                 <ImageButton
                     android:id="@+id/WomenEmpowermentImage"
@@ -65,6 +97,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textAlignment="center"
+                    android:textSize="24dp"
+                    android:text="Children's Education."/>
                 <ImageButton
                     android:id="@+id/ChildrenEducationImg"
                     android:layout_width="match_parent"
@@ -86,8 +125,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-
                 android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textAlignment="center"
+                    android:textSize="24dp"
+                    android:text="Nutrition Program."/>
                 <ImageButton
                     android:id="@+id/NutritionProgramImg"
                     android:layout_width="match_parent"
@@ -110,6 +155,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textAlignment="center"
+                    android:textSize="32dp"
+                    android:text="Workshops."/>
                 <ImageButton
                     android:id="@+id/WorkshopsImg"
                     android:layout_width="match_parent"
