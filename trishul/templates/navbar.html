@@ -5,36 +5,46 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto main-nav">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'home' %}">Home</a>
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
       </li>
-      <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="#">HTML</a></li>
-      <li><a href="#">CSS</a></li>
-      <li><a href="#">JavaScript</a></li>
-    </ul>
-    </div>
+     <!-- <li class="nav-item dropdown {% if request.path == products_bags_url %}active{% endif %}">
+           <a class="nav-link dropdown-toggle dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+             <i class="fas fa-book"></i> Products
+           </a>
+           <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item" href="{{ products_cfa_url }}">CFA</a>
+             <a class="dropdown-item" href="{{ products_frm_url }}">FRM</a>
+             <a class="dropdown-item" href="{{ products_erp_url }}">ERP</a>
+             <a class="dropdown-item" href="{{ products_caia_url }}">CAIA</a>
+             <a class="dropdown-item" href="{{ products_others_url }}">Others</a>
+           </div>
+        </li>-->
+
+        <div class="dropdown">
+          <button class="dropbtn">Dropdown</button>
+          <div class="dropdown-content">
+            <a href="#">Product 1</a>
+            <a href="#">Product 2</a>
+            <a href="#">Product 3</a>
+          </div>
+        </div>
+
       <li class="nav-item">
         <a class="nav-link" href="{% url 'donate' %}">Donate</a>
       </li>
-    </ul>
+      </ul>
+      </div>
       <ul class="nav navbar-nav navbar-right">
       {% if request.user.is_authenticated %}
       <div class="dropdown">
   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
     Dropdown button
   </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Link 1</a>
-    <a class="dropdown-item" href="#">Link 2</a>
-    <a class="dropdown-item" href="#">Link 3</a>
-  </div>
+
 </div>
-      <!--<li class="nav-item dropdown">
+      <li class="nav-item dropdown">
            <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{ request.user.username }}
@@ -45,7 +55,6 @@
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
             </div>
-          -->
       {% else %}
       <li class="nav-item">
         <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
