@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <div class="container">
     <div class="row">
-      <h3>{{ object.title }}</h3>
+      <h3>Bag1</h3>
     </div>
       <div class="row">
           <div class="mb-2">
@@ -36,14 +37,12 @@
             <i class="fas fa-angle-left fa-2x" style="color:black"></i>
             <span class="sr-only">Previous</span>
           </a>
-          <!-- {% if object.image %}
-            <img src="{{ object.image.url }}" class="rounded mx-auto d-block mt-3 mb-3"/>
-          {% endif %} -->
+  
           <div id="carouselExampleControls" class="carousel slide rounded mx-auto d-block mt-3 mb-3" data-ride="carousel">
             <div class="carousel-inner">
               {% if object.image %}
               <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ object.image.url }}" alt="First slide">
+                <img class="d-block w-100" src="{% static 'handbag.jpg' %}" alt="First slide">
               </div>
               {% endif %}
 
@@ -88,9 +87,6 @@
               </div>
             </div>
             <div class="row delivery">
-              <div class="col-lg-2 col-sm-4 text-muted">
-                Delivery
-              </div>
               <div class="col-lg-8 col-sm-8">
                 Add Delivery Details
               </div>

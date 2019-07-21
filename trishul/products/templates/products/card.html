@@ -1,6 +1,6 @@
 <div class="card" style="width:16rem;">
   {% if instance.image %}
-  <a href="">
+  <a href="{% url 'products:detail' object.slug %}">
     <img  class="card-img-top" src="{{ instance.image.url }}" alt="Card image cap"  height="200dp"></a>
   {% endif %}
   <div class="body">
@@ -12,7 +12,7 @@
     </div>
     {% if instance.in_stock %}
       <div class="add-to-cart justify-content-md-center">
-        <button type="button" class="btn btn-success btn-block mb-2">Buy Now</button>
+        <a type="button"  href="{% url 'products:detail' object.slug %}" class="btn btn-success btn-block mb-2">Buy Now</a>
       </div>
     {% else %}
       <button type="button" class="btn btn-warning btn-block mb-2 out-of-stock" disabled>Out Of Stock</button>
