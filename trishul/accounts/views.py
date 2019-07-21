@@ -29,13 +29,11 @@ def special(request):
     return HttpResponse('You are logged in')
 
 def user_login(request):
-    print('Inuser')
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
 
         user = authenticate(username=username, password=password)
-
         if user:
             login(request, user)
             return HttpResponseRedirect(reverse('home'))
