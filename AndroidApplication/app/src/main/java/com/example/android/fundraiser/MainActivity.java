@@ -9,9 +9,9 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private final static int REQUEST_CODE_1 = 1;
+//    private final static int REQUEST_CODE_1 = 1;
 //    private final static int   = 1;
 
     @Override
@@ -20,16 +20,33 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main);
 
         ImageButton img = (ImageButton) findViewById(R.id.WomenEmpowermentImage);
-        img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Click", Toast.LENGTH_LONG).show();
+        img.setOnClickListener(this);
+        ImageButton general = (ImageButton) findViewById(R.id.GeneralImg);
+        general.setOnClickListener(this);
+        ImageButton child = (ImageButton) findViewById(R.id.ChildrenEducationImg);
+        child.setOnClickListener(this);
+        ImageButton nutrition = (ImageButton) findViewById(R.id.NutritionProgramImg);
+        nutrition.setOnClickListener(this);
+        ImageButton work = (ImageButton) findViewById(R.id.WorkshopsImg);
+        work.setOnClickListener(this);
+//        img.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(MainActivity.this, "Click", Toast.LENGTH_LONG).show();
+////                String msg = "This message comes from PassingDataSourceActivity's first button";
+//                Intent intent =new Intent(MainActivity.this,Payments.class);
+//                MainActivity.this.startActivity(intent);
+////                OpenGateway(msg);
+//            }
+//        });
+    }
+
+    @Override
+    public void onClick(View view) {
+//        Toast.makeText(MainActivity.this, "Click", Toast.LENGTH_LONG).show();
 //                String msg = "This message comes from PassingDataSourceActivity's first button";
-                Intent intent =new Intent(MainActivity.this,Payments.class);
-                MainActivity.this.startActivity(intent);
-//                OpenGateway(msg);
-            }
-        });
+        Intent intent =new Intent(MainActivity.this,Payments.class);
+        MainActivity.this.startActivity(intent);
     }
 //
 //    private void OpenGateway(String msg) {

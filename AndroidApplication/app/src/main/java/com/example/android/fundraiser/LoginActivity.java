@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Toast.makeText(this,"YO",Toast.LENGTH_LONG).show();
+//        Toast.makeText(this,"YO",Toast.LENGTH_LONG).show();
         email = (EditText) findViewById(R.id.et_email);
         password = (EditText) findViewById(R.id.et_password);
         btnlogin = (Button) findViewById(R.id.logsbutton);
