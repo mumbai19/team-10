@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from . import views, settings
 from django.contrib import admin
-from .views import home_page, donate,checkout
+from .views import home_page, donate,checkout,payments
 from accounts.views import register, user_login, user_logout
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -31,4 +31,5 @@ urlpatterns = ([
     url(r'^products/', include('products.urls')),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^checkout/',checkout,name='checkout'),
+    url(r'^payments/',payments,name='payments')
 ])+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

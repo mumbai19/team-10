@@ -10,3 +10,6 @@ def donate(request):
 
 def checkout(request):
     return render(request, 'checkout.html')
+
+def payments(request):
+    return render(request, 'payments.html')
