@@ -13,3 +13,5 @@ def checkout(request):
 
 def payments(request):
     return render(request, 'payments.html')
+def cart(request):
+    return render(request, 'cart.html')
