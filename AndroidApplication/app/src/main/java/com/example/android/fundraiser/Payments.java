@@ -29,17 +29,24 @@ public class Payments extends AppCompatActivity implements PaymentResultListener
             public void onClick(View v) {
                 EditText edtEditText = (EditText)findViewById(R.id.PaymentAmount);
                 String amount = edtEditText.getText().toString();
-                Intent intent =new Intent(Payments.this,PaymentGateway.class);
-                Payments.this.startActivity(intent);
-                final_amount = Integer.parseInt(amount);
-
-
-            startPayment(final_amount);
-
+                if(isNumeric(amount)) {
+                    final_amount = Integer.parseInt(amount);
+                    if( final_amount !=0){
+                        startPayment(final_amount);
+                        Intent intent =new Intent(Payments.this,PaymentGateway.class);
+                        Payments.this.startActivity(intent);
+                    }
+                }
+                else{
+                    Toast.makeText(Payments.this,"Please enter a valid amount.", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
 
+    public static boolean isNumeric(String str) {
+        return str.matches("\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
+    }
 
     public void startPayment(int amount){
         Checkout checkout = new Checkout();
