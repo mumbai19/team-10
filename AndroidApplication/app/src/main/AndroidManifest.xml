@@ -28,7 +28,7 @@
         </activity> <!-- Razor metadata -->
         <meta-data
             android:name="com.razorpay.ApiKey"
-            android:value="rzp_test_FH0n89NV2RLKvr" />
+            android:value="ADD _API_KEY" />
     </application>
 
 </manifest>
