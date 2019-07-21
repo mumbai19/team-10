@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">MyNotes</string>
     <string name="title_activity_category">CategoryActivity</string>
+    <string name="women_empowerment">Women Empowerment \n At Trishul Women Empowerment Program (TWEP), our aim is to support economically less-privileged women from rural areas and urban slums as well as revive traditional art and handicrafts by training and encouraging budding artisans through our Skill Development Programs.</string>
+    <string name="children_education">Children Education \n Trishul Learning Centre (TLC) run by Trishul (NGO) works to help children from economically weaker communities in urban slums and rural villages to build a strong educational foundation, develop self-esteem, and assimilate values, which will help them maximize their potential and become economically independent and responsible citizens.</string>
+    <string name="workshop">Nutrition Program \n Workshop for a cause started by Trishul; profits from these workshops would be used for a cause like:-
+Free Learning program for children,
+Trishul Women Empowerment Program,
+Trishul Rural Community Development Programs,
+Waste Recycle and Environment Conservation Programs
+</string>
+    <string name="nutrition_program">Workshop \n We arrange Medical, Health and Hygiene (Awareness, Checkup and Followup Campaigns done by TRISHUL). Dental, ENT Check up Camps, Eye Check up and Specks Donation Camp</string>
+    <string name="general">General \n Trishul (NGO) is a registered charitable organization working towards building self-sustainable communities through skill development, education and livelihood programs in urban slums and economically weak rural villages in India. Core programs focus on empowering Women through skill development and empowering children’s through education.</string>
 </resources>
