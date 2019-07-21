@@ -45,7 +45,8 @@
             <div class="carousel-inner">
               {% if object.image %}
               <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ object.image.url }}" alt="First slide">
+                <a href="" >
+                <img class="d-block w-100" src="{{ object.image.url }}" alt="First slide"/></a>
               </div>
               {% endif %}
 
@@ -57,9 +58,7 @@
           </a>
         </div>
         <div class="row mt-3 mb-3">
-          <div class="container-fluid">
-              <button type="button" class="btn btn-warning btn-block out-of-stock" disabled>Out Of Stock</button>
-          </div>
+         
         </div>
       </div>
       <div class='col-lg-8 col-md-6 col-sm-12'>
@@ -70,9 +69,7 @@
               <div class="col-lg-6 col-sm-8">
                 <i class="fas fa-rupee-sign fa-1x" style="color:#2277BC;"></i><span class="price">{{ object.price }}</span> + <span class="text-muted">FREE Delivery</span>
 
-                <div class="text-muted">
-                  Inclusice of all Taxes
-                </div>
+                
               </div>
                 <!-- <div class="col-lg-2 col-sm-4 price">
                   <i class="fas fa-rupee-sign"></i>{{ object.price }}
